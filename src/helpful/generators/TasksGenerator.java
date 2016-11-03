@@ -1,4 +1,4 @@
-package generators;
+package helpful.generators;
 
 
 public class TasksGenerator {

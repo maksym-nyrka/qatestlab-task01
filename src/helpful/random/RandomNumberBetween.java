@@ -1,8 +1,8 @@
-package random;
+package helpful.random;
 
 import java.util.concurrent.ThreadLocalRandom;
 
-//Generates a random number between two given numbers
+//Generates a helpful.random number between two given numbers
 public class RandomNumberBetween {
     public static int get(int first, int second)
     {

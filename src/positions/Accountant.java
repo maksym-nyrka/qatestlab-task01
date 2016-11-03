@@ -1,18 +1,29 @@
 package positions;
 
 
+import positions.models.FixedRateable;
 import positions.models.Position;
 
-import java.util.Map;
-
-public class Accountant extends Position {
-    Accountant()
+public class Accountant extends Position implements FixedRateable {
+    public Accountant()
     {
         super();
-
+        addDefaultAbilities();
     }
 
-    public void addAbility(String name, String specialization) {
+    @Override
+    public void setFixedRate(double amount) {
+        this.setSalary(amount);
+    }
 
+    @Override
+    public double getFixedRate() {
+        return this.getSalary();
+    }
+
+    //TODO add default abilities to all positions
+    private void addDefaultAbilities() {
+        this.addAbility("");
+        this.addAbility("");
     }
 }
