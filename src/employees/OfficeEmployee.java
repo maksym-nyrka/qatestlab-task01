@@ -8,25 +8,17 @@ import java.util.ArrayList;
 
 //Class that describes an employee that works in the company
 public class OfficeEmployee {
-    //public static final int MAX_WORK_HOURS_PER_WEEK = 40;
-    private int workedHours;
     private ArrayList<Position> positions;
     private Pair<Integer, Integer> workingHours; //<from,to>
-    private boolean isBusy;
+    private ArrayList<Integer> busyHours;
+    private double earnedMoney;
 
     public OfficeEmployee() {
-        this.isBusy = false;
-        this.workedHours = 0;
+        this.earnedMoney = 0;
         this.positions = new ArrayList<>();
         this.workingHours = new Pair<>(0, 0);
-    }
+        busyHours=new ArrayList<>();
 
-    public int getWorkedHours() {
-        return workedHours;
-    }
-
-    public void setWorkedHours(int workedHours) {
-        this.workedHours = workedHours;
     }
 
     public ArrayList<Position> getPositions() {
@@ -45,11 +37,15 @@ public class OfficeEmployee {
         this.workingHours = workingHours;
     }
 
-    public boolean isBusy() {
-        return isBusy;
+    public double getEarnedMoney() {
+        return earnedMoney;
     }
 
-    public void setBusy(boolean busy) {
-        isBusy = busy;
+    public void addEarnedMoney(double earnedMoney) {
+        this.earnedMoney += earnedMoney;
+    }
+
+    public ArrayList<Integer> getBusyHours() {
+        return busyHours;
     }
 }
