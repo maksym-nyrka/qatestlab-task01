@@ -25,10 +25,6 @@ public abstract class Position {
         return abilitiesList;
     }
 
-    public void setAbilitiesList(ArrayList<String> abilitiesList) {
-        this.abilitiesList = abilitiesList;
-    }
-
     public void addAbility(String abilityName) {
         this.abilitiesList.add(abilityName);
     }

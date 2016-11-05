@@ -34,10 +34,6 @@ public class OfficeEmployee {
         return workingHours;
     }
 
-    public void setWorkingHours(Pair<Integer, Integer> workingHours) {
-        this.workingHours = workingHours;
-    }
-
     public double getEarnedMoney() {
         return earnedMoney;
     }

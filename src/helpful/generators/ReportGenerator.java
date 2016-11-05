@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+//Generates a text file with report
 public class ReportGenerator {
     private static String fileName = "report.txt";
     public static void generate(ArrayList<OfficeEmployee> employees, RemoteEmployee freelancer)

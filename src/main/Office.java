@@ -31,14 +31,12 @@ public class Office {
 
         for (day=1;day<=LAST_DAY;day++)
         {
-            if (day%7==0){//Every Sunday main accountant sends salary to programmers,testers,designers
-                accountant.sendWeeklySalary(employees);
-            }
+            //Every Sunday main accountant sends salary to programmers,testers,designers
+            if (day%7==0) accountant.sendWeeklySalary(employees);
+
             for (hour = Info.OFFICE_WORK_HOURS.getFirst();hour<Info.OFFICE_WORK_HOURS.getSecond();hour++)
-            {
-                System.out.println("d"+day+"h"+hour);
                 directorGivesTasks();
-            }
+
             for (OfficeEmployee e: employees)//Working day is over, employees are free
                 e.setBusyHoursNull();
             if (day==LAST_DAY) {//On the last day of month main accountant sends salary to all employees
